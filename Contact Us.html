@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marina Fleet</title>
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist\css\bootstrap.css" type="text/css">
+</head>
+<style>
+     body{
+      background-color: lightgray;
+    }
+    .bg-dark {
+    background-color: rgb(6, 143, 255) !important;
+  }
+  span:hover {
+    background-color: rgb(98, 189, 238);
+    border-radius: 90px;
+    text-align: center;
+    box-shadow: 0 0 10px #f7ebeb, 0 0 20px #f7ebeb, 0 0 40px #f7ebeb, 0 0 80px #f7ebeb;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+
+  .yac{
+    font-size: 500%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    color: transparent;
+    -webkit-text-stroke: 1px black;
+   background: url(load.jpeg);
+   -webkit-background-clip:  text;
+   background-position: 0 0;
+   animation: back 20s linear infinite;
+}
+@keyframes back{
+    100%{
+        background-position: 2000px 0;
+    }
+}
+.font_sizing {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    text-decoration-color: black;
+    font-size: 40px;
+  }
+  @media screen and (max-width:600px)  {
+    .font_sizing {
+    font-size: 8px;
+  }
+  .yac{
+    font-size: 200%;
+}
+}
+.img{
+    position: absolute;
+    width: 100%;
+    left: 0;
+  }
+  .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+    background-color: rgb(146, 206, 255) ;
+    cursor: pointer;
+    border-radius: 0 0 30px 30px;
+  }
+  .content{
+    position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+    color: white;
+    text-align: center;
+  }
+  .img:hover .overlay{
+    opacity: 0.8;
+  }
+  .form{
+    width: 350px;
+  }
+  .form1{
+    width: 350px;
+    height: 150px;
+  }
+  #rd{
+   border-radius: 30px 5px;
+  }
+  #form2{
+   justify-content: center;
+  }
+ #image{
+  margin: auto;
+  display: block;
+ }
+ .mac{
+    font-size: 200%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    color: transparent;
+    -webkit-text-stroke: 1px black;
+   background: url(load.jpeg);
+   -webkit-background-clip: text;
+   background-position: 0 0;
+   animation: back 20s linear infinite;
+   margin-top: 653px;
+}
+@keyframes back{
+    100%{
+        background-position: 2000px 0;
+    }
+}
+.li{
+    text-decoration: none; 
+    color: black;
+    text-align: center;
+    margin: auto; display: block;
+}
+.txt{
+    margin-left: 30%; 
+    margin-top: 43px; 
+    border-radius: 4px; 
+    width: 50%; 
+    height: 38px; 
+    border: none;
+    padding: 15px;
+}
+.txt:focus{
+    outline-color:white ;
+
+}
+.msg{
+    margin-left: 30%; 
+    margin-top: 30px; 
+    border-radius: 4px; 
+    width: 50%; 
+    height: 220px; 
+    border: none;
+    padding-left: 15px;
+    padding-bottom: 170px;
+}
+.msg:focus{
+    outline-color:white ;
+
+}
+#row{
+    background-color: black;
+     border-radius: 50px;
+     margin-left: 70px;
+     margin-right: 70px;
+     height: 60%;
+}
+.fa-map-marker {
+    padding: 5px 9px 7px 9px;
+}
+#map {
+    width: 70%;
+    height: 500px;
+    background-color: rgb(98, 189, 238);
+    margin: auto;
+    display: block;
+    border-radius: 20px;
+}
+#btt{
+    margin-left: 30%; 
+    margin-top: 30px;
+    margin-bottom: 15px; 
+    border-radius: 4px; 
+    width: 50%; 
+    height: 38px; 
+    border: none;
+    padding: 15px;
+    text-align: center;
+    padding: 2px;
+    background-color: rgb(98, 189, 238);
+}
+#btt:hover{
+    box-shadow: 0 0 10px #f7ebeb, 0 0 20px #f7ebeb, 0 0 40px #f7ebeb, 0 0 80px #f7ebeb;
+}
+#btt:focus{
+    outline-color:white ;
+}
+.btn:hover {
+    background-color: #2e2d2d;
+  color: antiquewhite;
+    text-align: center;
+    box-shadow: 0 0 10px #f7ebeb, 0 0 20px #f7ebeb, 0 0 40px #f7ebeb, 0 0 80px #f7ebeb;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.ftt{
+    width: 100%; 
+    height: 200px; 
+    padding-bottom: 35%; 
+    padding-left: 2%; 
+    border: none;
+}
+.ftt:focus{
+    outline-color: rgb(98, 189, 238);
+}
+#ftt1{
+    background-color: rgb(98, 189, 238); 
+    width: 2%; 
+    height: 10px;
+}
+#ftt2{
+    background-color: rgb(98, 189, 238); 
+    border: none; 
+    width: 50%; 
+    margin-right: 25%;
+}
+#def{
+  background-color: black; 
+  border: none; 
+  margin-right: 7%;
+}
+@media screen and (max-width:600px) {
+  #row{
+    margin: 0;
+  }
+  .txt{
+  width: 70%;
+  margin: 20px 0px 0 40px;
+}
+.msg{
+  width: 70%;
+  margin: 20px 0px 0 40px;
+
+}
+}
+</style>
+
+<body>
+     <!--Start of header-->
+                <nav class="navbar navbar-expand-sm bg-dark navbar-dark" style="margin: 0; border-radius: 30px 30px 0px 0px;">
+                    <div class="container-fluid">
+                      <a class="navbar-brand" href="#">
+                        <img src="images0\logo.jpg"
+                          alt="Avatar Logo" style="width:100px;" class="rounded-pill">
+                      </a>
+                      <ul class="nav">
+                        <span>
+                          <li class="nav-item">
+                            <a class="nav-link" href="Index.html" style="width: 100px; color:white;">HOME</a>
+                          </li>
+                        </span>
+                        <span>
+                          <li class="nav-item">
+                            <a class="nav-link" href="gallery.html" style="width: 100px; color:white">GALLERY</a>
+                          </li>
+                        </span>
+                        <span>
+                          <li class="nav-item">
+                            <a class="nav-link" href="Luxury.html" style="width: 100px; color:white">LUXURY</a>
+                          </li>
+                        </span>
+                        <span>
+                          <li class="nav-item">
+                            <a class="nav-link" href="sailing.html" style="width: 100px; color:white">SAILING</a>
+                          </li>
+                        </span>
+                        <span>
+                          <li class="nav-item">
+                            <a class="nav-link" href="fishing.html" style="width: 100px; color:white">FISHING</a>
+                          </li>
+                        </span>
+                        <span>
+                          <li class="nav-item">
+                            <a class="nav-link" href="About Us.html" style="width: 140px; color:white">ABOUT US</a>
+                          </li>
+                        </span>
+                        <span>
+                          <li class="nav-item">
+                            <a class="nav-link" href="Contact Us.html" style="width: 140px; color:white">CONTACT US</a>
+                          </li>
+                        </span>
+                      </ul>
+                    </div>
+                  </nav>
+          <!--End of header-->
+
+
+
+<!--Start of contact us hover-->
+<div class="conatiner-fluid">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="img">
+                <img src="images0\Slidebar.jpg" alt="Marina Fleet" style="margin: 0; width: 100%; border-radius: 0 0 30px 30px;"  height="650px">
+                 <div class="overlay">
+                  <div class="content">
+                    <h3 class="yac">CONTACT US</h3>
+                  </div>
+                 </div>
+               </div>
+             
+        </div>
+    </div>
+</div><br>
+     
+<!--End of contact us hover-->
+
+<!--Start of location-->
+<div class="container-fluid">
+    <div class="row" >
+      <div class="col-lg-12">
+        <h3><strong><i><p class="mac">GET IN TOUCH</p></i></strong></h3>
+        <p><h5 class="li">PHONE: (021) 36620102</h5></p>
+        <p><h5><a href="http://aptech-education.com.pk/locateus.html?cid=2086"  class="li">EMAIL: info-nn@aptech-education.com.pk</a></h5></p>
+       <p><h5><a  href="htps://www.google.com/search?rlz=1C1OKWM_enUS1036US1036&s
+        xsrf=APwXEddJMijbpKQmdYUTmgvhpNuCY3sQZA:1685822893820&q=aptech+learning+north+nazimabad+ii+center+d+-+4
+        %D8%8C+%D8%B4%D9%85%D8%A7%D9%84%DB%8C+%D9%86%D8%A7%D8%B8%D9%85+%D8%A2%D8%A8%D8%A7%D8%AF+%D9%B9%D8%A7%D8%A4%D9%
+        86+address&ludocid=6750379321337180458&sa=X&ved=2ahUKEwjG2PXV86f_AhU__7sIHYq6ADMQ6BN6BAhcEAI&biw=1600&bih=732&dpr=1" class="li">  <img src="images0\Location.png" width="20px" height="20px"> 
+        ADDRESS: D - 4 Block H North Nazimabad Town, Karachi City, Sindh 74700</a></h5></p>
+      </div>
+    </div>
+   </div>   
+<!--End of location-->
+
+<!--Start of form-->
+<div class="container-fluid">
+    <div class="row" id="row">
+        <div class="col-lg-6" >
+          <form>
+           <input type="text" placeholder="Name" class="txt" id="name"><span id="name_error" ></span> <br><br> 
+           <input type="text"placeholder="Phone"  class="txt" id="phone"><span id="phn_error"></span><br><br>
+           <input type="text"placeholder="Email" class="txt" id="email"><span id="email_error"></span><br><br>
+        </form>
+        </div>
+         <div class="col-lg-6">
+            <form>
+            <input type="text" placeholder="Your Message" class="msg">
+          </form>
+          <button id="btt" onclick="cal()">SEND MESSAGE</button><br>
+        </div>
+        
+            </div>
+        </div>
+    </div>
+</div><br><br>
+<!--End of form-->
+
+<!--Start of Map-->
+<div class="container-fluid">
+  <div class="row">
+      <div class="col-lg-12 p-0">
+        <div id="map">
+          <script>
+            function initMap(){
+                var Aptech = {
+                    lat: 24.9289577,
+                    lng: 67.0356264
+                };
+                var abc = new google.maps.Map(document.getElementById("map"),{
+                    zoom: 18,
+                    center: Aptech
+                });
+                var marker = new google.maps.Marker({
+                    position: Aptech,
+                    map: abc
+                });
+                
+            }
+        </script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAg272BuCY-f0VDYyrc9O_1OYHXjDThoSQ
+        &callback=initMap"></script><br><br>
+        </div>
+      </div>
+  </div>
+</div><br><br>
+<!--Start of Map-->
+
+ <!--Start of footer-->
+ <footer class="footer" style="background-color: black; color: white; border-radius: 20px;" >
+  <div class="container">
+    <div class="row shadow2" style="background-color: black; color: white;">
+      <div class="col-md-3" style="position: relative; margin-top: 71px;">
+        <h3><strong> <span8 style="color: blue;"><strong>|</strong></span8>MARINA FLEET</strong></h3>
+        The Pakistan Fleet Marine Forces (FMF) <br> are combined general and special <br> purpose forces within the Pakistan <br> Department 
+        of the Navy that perform <br> offensive amphibious or expeditionary <br> warfare and defensive maritime <br> employment.
+        </div>
+  
+
+      <div class="col-md-3">
+        <h4 style="position: relative; margin-left: 27px; margin-top: 26px;"><strong> Useful Links</strong></h4>
+   <ul style="position: relative; margin-top: 39px">
+    <a href="Index.html" style="text-decoration: none; "><span11 class="btn" style="color: rgb(255, 255, 255); margin-left: 8%;">HOME</span11> </a><hr>
+    <a href="About Us.html" style="text-decoration: none; "><span12  class="btn" style="color: rgb(255, 255, 255); margin-left: 8%;"> ABOUT US</span12></a><hr>
+    <a href="Contact Us.html"  style="text-decoration: none; "><span13 class="btn" style="color: rgb(255, 255, 255); margin-left: 8%;"> CONTACT US</span13></a><hr>
+    <a href="#" style="text-decoration: none; "><span14  class="btn" style="color: rgb(255, 255, 255); margin-left: 8%;">SIDE MAP</span14> </a><hr>
+    <div class="container mt-3">
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal" id="def">
+       FEEDBACK
+      </button>
+    </div>
+    
+    <!-- The Modal -->
+    <div class="modal" id="myModal">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+    
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title" style="color: black; margin-left: 35%;">FEEDBACK</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" id="ftt1"></button>
+          </div>
+    
+          <!-- Modal body -->
+          <div class="modal-body">
+           <form action="">
+              <input type="text" placeholder="Feedback Please :)" class="ftt">
+           </form>
+          </div>
+    
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal" id="ftt2">SEND</button>
+          </div>
+    
+        </div>
+      </div>
+    </div>
+    
+   </ul>
+      </div>
+
+      <div class="col-md-3">
+        <h4 style="position: relative; margin-top: 26px;"><strong> Contact Us</strong></h4>
+<p  style="position: relative;margin-top: 37px;">
+  ADDRESS: D - 4 Block H <br> North Nazimabad Town, <br> Karachi City, Sindh 74700
+ <br><br>
+ <strong>Phone:</strong>(021) 36620102
+ <br><br>
+ <strong>Email:</strong>info-nn@aptech-education.com.pk<br><br>
+ <a href=""><img src="images0\insta.png" width="53px" style="border-radius: 20px;" class="btn"></a> 
+ <a href=""><img src="images0\twitter.png" width="50px" style=" position: relative;margin-left: 12px; border-radius: 20px;" class="btn" ></a>
+ <a href=""><img src="images0\Facebook.jpg" width="50px" class="btn" style="border-radius: 150px;"></a>
+</p>
+      </div>
+
+      <div class="col-md-3">
+          <h4 style="position: relative; margin-top: 27px;"><strong> Our Newsletter</strong></h4>
+          <p style="position: relative;margin-top: 37px;">Tamen quem nulla quae legam multos aute sint culpa legam noster magna veniam enim veniam illum dolore legam minim quorum culpa amet magna export quem marada parida nodela caramase seza.</p>
+          <form action="" method="post">
+            <input type="email" name="email" style="width:170px ;">
+            
+            <input type="submit" class="hover-sub " value="Subscribe">
+          </form>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col text-center">
+        &copy; 2023 Your Company. All rights reserved.
+      </div>
+    </div>
+
+<!--End of footer-->
+
+<script>
+  function cal() {
+            name = document.getElementById('name').value;
+            phone = document.getElementById('phone').value;
+            email = document.getElementById('email').value;
+
+            name_chk = /^([a-zA-Z])+$/;
+            email_chk = /^([a-zA-Z0-9\-\.]{5,20})+\@([a-zA-Z])+\.([a-zA-Z]{2,4})+$/;
+            phn_chk = /^([03]{2})+([0-9]{2})+\-+([0-9]){7}+$/;
+  
+            //                                       F Name
+            if (name.length > 0) {
+                if (name_chk.test(name) == true) {
+                    document.getElementById("name_error").innerHTML = '';
+                }
+                else {
+                    document.getElementById("name_error").innerHTML = 'Only alphabet Allowed';
+                    document.getElementById("name_error").style.color = "red";
+                }
+            }
+            else {
+                document.getElementById("name_error").innerHTML = 'Please Enter Name';
+                document.getElementById("name_error").style.color = "red";
+
+            }
+
+            //                                       L Name
+            if (phone.length > 0) {
+                if (phn_chk.test(phone) == true) {
+                    document.getElementById("phn_error").innerHTML = '';
+                }
+                else {
+                    document.getElementById("phn_error").innerHTML = 'Only alphabet Allowed';
+                    document.getElementById("phn_error").style.color = "red";
+                }
+            }
+            else {
+                document.getElementById("phn_error").innerHTML = 'Please Enter Name';
+                document.getElementById("phn_error").style.color = "red";
+
+            }
+            //                                       Email
+            if (email.length > 0) {
+                if (email_chk.test(email) == true) {
+                    document.getElementById("email_error").innerHTML = '';
+                }
+                else {
+                    document.getElementById("email_error").innerHTML = 'Please Enter Valid Email';
+                    document.getElementById("email_error").style.color = "red";
+                }
+            }
+            else {
+                document.getElementById("email_error").innerHTML = 'Please Enter Email';
+                document.getElementById("email_error").style.color = "red";
+
+            }
+        
+
+            var name_error1 = document.getElementById('name_error').innerHTML;
+            var phone_error1 = document.getElementById('phn_error').innerHTML;
+            var email_error1 = document.getElementById('email_error').innerHTML;
+
+            if (name_error1.length == 0 && phone_error1.length == 0 && email_error1.length == 0) {
+                document.getElementById("name").value = "";
+                document.getElementById("phone").value = "";
+                document.getElementById("email").value = "";
+                alert(" Your Message Has Been Send!!! 😃")
+            }
+            else{}
+          }
+
+        // Sign Up End 
+</script>
+
+
+
+
+  <script src="bootstrap-5.0.2-dist\js\bootstrap.js"></script>
+</body>
+</html>

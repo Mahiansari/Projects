@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css">
+  <script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+    const textElement = document.querySelector('.text-transition');
+    textElement.classList.add('show');
+  });
+  
+    
+  </script>
+  <style>
+    /* Custom CSS for image transitions */
+    body{
+      background-color: lightgray;
+    }
+    .bg-dark {
+      background-color: rgb(6, 143, 255) !important;
+  }
+
+  span:hover {
+    background-color: rgb(98, 189, 238);
+    border-radius: 90px;
+    text-align: center;
+    box-shadow: 0 0 10px #f7ebeb, 0 0 20px #f7ebeb, 0 0 40px #f7ebeb, 0 0 80px #f7ebeb;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  .font_sizing {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    text-decoration-color: black;
+    font-size: 40px;
+  }
+  @media screen and (max-width:600px)  {
+    .font_sizing {
+    font-size: 8px;
+  }
+}
+.btn:hover {
+    background-color: #2e2d2d;
+  color: antiquewhite;
+    text-align: center;
+    box-shadow: 0 0 10px #f7ebeb, 0 0 20px #f7ebeb, 0 0 40px #f7ebeb, 0 0 80px #f7ebeb;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+    .image-container {
+      position: relative;
+      overflow: hidden;
+      padding: 0;
+    }
+    .image-container img {
+      width: 100%;
+      height: auto;
+      transition: transform 0.3s ease;
+    }
+    .image-container:hover img {
+      transform: scale(1.1);
+    }
+
+    .text-transition {
+      opacity: 0;
+      transition: opacity 1s ease-in;
+    }
+
+    .text-transition.show {
+      opacity: 1;
+    }
+    .text{
+  position: relative;
+  bottom: 210px;
+  font-size: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+    }
+    
+
+    
+   
+
+    .image-container {
+      position: relative;
+      overflow: hidden;
+      padding: 10px;
+      margin: 5px;
+      border: white solid 5px;
+    
+    }
+    .image-container img {
+      width: 100%;
+      height: auto;
+      transition: transform 0.3s ease;
+    }
+    .image-container .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .image-container:hover .overlay {
+      opacity: 1;
+    }
+    .image-container .overlay img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .footer {
+      background-color: #bdcbf8;
+      padding: 20px 0;
+      color: #333;
+    }
+
+    .footer .row {
+      margin-bottom: 20px;
+    }
+    #yac{
+    font-size: 50px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    color: transparent;
+    -webkit-text-stroke: 1px black;
+   background: url(load.jpeg);
+   -webkit-background-clip:  text;
+   background-position: 0 0;
+   animation: back 20s linear infinite;
+}
+@keyframes back{
+    100%{
+        background-position: 2000px 0;
+    }
+}
+.ftt{
+    width: 100%; 
+    height: 200px; 
+    padding-bottom: 35%; 
+    padding-left: 2%; 
+    border: none;
+}
+.ftt:focus{
+    outline-color: rgb(98, 189, 238);
+}
+#ftt1{
+    background-color: rgb(98, 189, 238); 
+    width: 2%; 
+    height: 10px;
+}
+#ftt2{
+    background-color: rgb(98, 189, 238); 
+    border: none; 
+    width: 50%; 
+    margin-right: 25%;
+}
+#def{
+  background-color: black; 
+  border: none; 
+  margin-right: 7%;
+}
+  </style>
+</head>
+<body>
+  <!--Start of header-->
+  <div class="container-fluid">
+    <div class="row" >
+      <div class="col-lg-12">
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+              <img src="images0\logo.jpg"
+                alt="Avatar Logo" style="width:100px;" class="rounded-pill">
+            </a>
+            <ul class="nav">
+              <span>
+                <li class="nav-item">
+                  <a class="nav-link" href="Index.html" style="width: 100px; color:white;">HOME</a>
+                </li>
+              </span>
+              <span>
+                <li class="nav-item">
+                  <a class="nav-link" href="gallery.html" style="width: 100px; color:white">GALLERY</a>
+                </li>
+              </span>
+              <span>
+                <li class="nav-item">
+                  <a class="nav-link" href="Luxury.html" style="width: 100px; color:white">LUXURY</a>
+                </li>
+              </span>
+              <span>
+                <li class="nav-item">
+                  <a class="nav-link" href="sailing.html" style="width: 100px; color:white">SAILING</a>
+                </li>
+              </span>
+              <span>
+                <li class="nav-item">
+                  <a class="nav-link" href="fishing.html" style="width: 100px; color:white">FISHING</a>
+                </li>
+              </span>
+              <span>
+                <li class="nav-item">
+                  <a class="nav-link" href="About Us.html" style="width: 140px; color:white">ABOUT US</a>
+                </li>
+              </span>
+              <span>
+                <li class="nav-item">
+                  <a class="nav-link" href="Contact Us.html" style="width: 140px; color:white">CONTACT US</a>
+                </li>
+              </span>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <!--End of header-->
+ 
+ <!--Start of slidebar-->
+ <div class="container-fluid">
+  <div class="row" id="shadow"  >
+    <div class="col-lg-12 md-8 sm-6">
+      <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+        <!-- Indicators/dots -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+        </div>
+
+        <!-- The slideshow/carousel -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images0\Slidebar.jpg" alt="Los Angeles" class="d-block" style="width:100%">
+            <div class="carousel-caption">
+             <h3 class="font_sizing">
+                <p><strong><i>SHELLS SINK <br> DREAMS FLOAT <br> LIFE IS GOOD ON OUR BOAT!!</i></strong></p>
+              </h3>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="images0\Slidebar.jpg" alt="Chicago" class="d-block" style="width:100%">
+            <div class="carousel-caption">
+              <h3  class="font_sizing">
+                <p><strong><i>BEAT THE HEAT <br> CHARTER A YATCH!! <br> PRESTIGE YACHTS</i></strong></p>
+              </h3>
+            
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="images0\Slidebar.jpg" alt="New York" class="d-block" style="width:100%">
+            <div class="carousel-caption">
+              <h3 class="font_sizing">
+                <p><strong><i>ENJOY WITH MARINA FLEET <br> MEMORABLE EXPERIENCE</i></strong></p>
+              </h3>
+             
+            </div>
+          </div>
+        </div>
+        <script>
+          let slideIndex = 0;
+          showSlides();
+
+          function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 2000); // Change image every 2 seconds
+          }
+
+        </script>
+      </div>
+    </div>
+  </div>
+</div><br><br>
+<!--End of slidebar-->
+  
+  
+  
+
+<div class="container-fluid">
+  <div class="row" >
+    <div class="col-lg-12">
+      <h3><strong><i><p id="yac">GALLERY</p></i></strong></h3>
+    </div>
+  </div>
+ </div><br>
+
+
+     <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="image-container">
+              <img src="images0\allure of the seas.jpg" alt="Image 1"  class="img-fluid" style="height: 195px; width: 500px;">
+              <div class="overlay">
+                <p alt="Overlay 1">
+                  <h1 style="font-weight: bolder ; color: rgb(218, 250, 40); font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; margin: 10px;"><center>Allure Of The Seas</center></h1>
+                  <p style="color: yellow; font-family: Georgia, 'Times New Roman', Times, serif; margin: 25px;">The gross tonnage of Allure of the Seas is 225,282 and her displacement is equal to that of Oasis of the Seas.</p>
+                </p>
+              </div>
+            </div>
+          </div>
+       
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="image-container">
+              <img src="images0\HMAV bounty.jpg" alt="Image 2"  class="img-fluid"  style="height: 195px; width: 500px;">
+              <div class="overlay">
+                <h1 style="font-weight: bolder ; color: rgb(218, 250, 40); font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; margin: 10px;"><center>HMS Bounty</center></h1>
+                <p style="color: yellow; font-family: Georgia, 'Times New Roman', Times, serif; margin: 25px;">HMS Bounty, also known as HM Armed Vessel Bounty, was a small merchant vessel that the Royal Navy purchased in 1787 for a botanical mission. </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="image-container">
+              <img src="images0\mayflower.jpg" alt="Image 3"  class="img-fluid"  style="height: 195px; width: 500px;">
+              <div class="overlay">
+               <p alt="Overlay 3">
+                <h1 style="font-weight: bolder ; color: rgb(218, 250, 40); font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; margin: 10px;"><center>Mayflower</center></h1>
+                <p style="color: yellow; font-family: Georgia, 'Times New Roman', Times, serif; margin: 25px;">Mayflower was an English ship that transported a group of English families, known today as the Pilgrims, from England to the New World in 1620.</p>
+
+               </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="image-container">
+              <img src="images0\ms estonia.jpg" alt="Image 3"  class="img-fluid"  style="height: 220px; width: 500px;">
+              <div class="overlay">
+               <p alt="Overlay 3">
+                <h1 style="font-weight: bolder ; color: rgb(218, 250, 40); font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ; margin: 10px;"><center>MS Estonia</center></h1>
+                <p style="color: yellow; font-family: Georgia, 'Times New Roman', Times, serif; margin: 25px;">The MS Estonia was a cruiseferry built in 1980 for the Finnish company Rederi Ab Sally by Meyer Werft, in Papenburg, West Germany. </p>
+
+               </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="image-container">
+              <img src="images0\ms freedom of the seas.jpg" alt="Image 3"  class="img-fluid"  style="height: 220px; width: 500px;">
+              <div class="overlay">
+               <p alt="Overlay 3">
+                <h1 style="font-weight: bolder ; color: rgb(218, 250, 40); font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; margin: 10px;"><center>MS Freedom Of The Seas</center></h1>
+                <p style="color: yellow; font-family: Georgia, 'Times New Roman', Times, serif; margin: 25px;">MS Freedom of the Seas is a cruise ship operated by Royal Caribbean International. She is the namesake of Royal Caribbean's Freedom class, and can accommodate 3,634 passengers and 1,300 crew on fifteen passenger decks. </p>
+
+               </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="image-container">
+              <img src="images0\msc seashore.jpg" alt="Image 3"  class="img-fluid"  style="height: 220px; width: 500px;">
+              <div class="overlay">
+               <p alt="Overlay 3">
+                <h1 style="font-weight: bolder ; color: rgb(218, 250, 40); font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; margin: 10px;"><center>MSC Seashore</center></h1>
+                <p style="color: yellow; font-family: Georgia, 'Times New Roman', Times, serif; margin: 25px;">MSC Seashore is a Seaside EVO-class cruise ship built for MSC Cruises at the Fincantieri shipyard in Monfalcone, Italy.</p>
+
+               </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="image-container">
+              <img src="images0\santa maria.jpg" alt="Image 3"  class="img-fluid"  style="height: 220px; width: 500px;">
+              <div class="overlay">
+               <p alt="Overlay 3">
+                <h1 style="font-weight: bolder ; color: rgb(218, 250, 40); font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; margin: 10px;"><center>Santa Maria</center></h1>
+                <p style="color: yellow; font-family: Georgia, 'Times New Roman', Times, serif; margin: 25px;">The ship is 22 m (72 ft) long and 7 m (23 ft) wide. In 1998 Santa María represented the Madeira Wine Expo 98 in Lisbon, where she was visited by over 97,000 people in 25 days. </p>
+
+               </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="image-container">
+              <img src="images0\voyager class cruise ships.jpg" alt="Image 3"  class="img-fluid"  style="height: 220px; width: 500px;">
+              <div class="overlay">
+               <p alt="Overlay 3">
+                <h1 style="font-weight: bolder ; color: rgb(218, 250, 40); font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; margin: 10px;"><center>Cruise Ships</center></h1>
+                <p style="color: yellow; font-family: Georgia, 'Times New Roman', Times, serif; margin: 25px;">Cruise ships are large passenger ships used mainly for vacationing. Unlike ocean liners, which are used for transport. </p>
+
+               </p>
+              </div>
+            </div>
+          </div>
+       
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="image-container">
+              <img src="images0\wonder of the seas.jpg" alt="Image 3"  style="height: 220px; width: 500px;">
+              <div class="overlay">
+               <p alt="Overlay 3">
+                <h1 style="font-weight: bolder ; color: rgb(218, 250, 40); font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; margin: 10px;"><center>Wonder Of The Seas</center></h1>
+                <p style="color: yellow; font-family: Georgia, 'Times New Roman', Times, serif; margin: 25px;">Wonder of the Seas measures 1,188 feet (362 m) in length and has a gross tonnage of 236,857 across 18 decks. This ship accommodates 5,734 passengers.</p>
+               </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="image-container">
+              <img src="images0\carnival_conquest.jpg" alt="Image 3"  style="height: 220px; width: 500px;">
+              <div class="overlay">
+               <p alt="Overlay 3">
+                <h1 style="font-weight: bolder ; color: rgb(218, 250, 40); font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; margin: 10px;"><center>Carnival Conquest</center></h1>
+                <p style="color: yellow; font-family: Georgia, 'Times New Roman', Times, serif; margin: 25px;">Wonder of the Seas measures 1,188 feet (362 m) in length and has a gross tonnage of 236,857 across 18 decks. This ship accommodates 5,734 passengers.</p>
+               </p>
+              </div>
+            </div>
+          </div>
+    
+
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="image-container">
+              <img src="images0\carnival_dream.jpg" alt="Image 3"  style="height: 220px; width: 500px;">
+              <div class="overlay">
+               <p alt="Overlay 3">
+                <h1 style="font-weight: bolder ; color: rgb(218, 250, 40); font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; margin: 10px;"><center>Carnival Dream</center></h1>
+                <p style="color: yellow; font-family: Georgia, 'Times New Roman', Times, serif; margin: 25px;">Wonder of the Seas measures 1,188 feet (362 m) in length and has a gross tonnage of 236,857 across 18 decks. This ship accommodates 5,734 passengers.</p>
+               </p>
+              </div>
+            </div>
+          </div>
+    
+
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="image-container">
+              <img src="images0\carnival_freedom.png" alt="Image 3"  style="height: 220px; width: 500px;">
+              <div class="overlay">
+               <p alt="Overlay 3">
+                <h1 style="font-weight: bolder ; color: rgb(218, 250, 40); font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; margin: 10px;"><center>Carnival Freedom</center></h1>
+                <p style="color: yellow; font-family: Georgia, 'Times New Roman', Times, serif; margin: 25px;">Wonder of the Seas measures 1,188 feet (362 m) in length and has a gross tonnage of 236,857 across 18 decks. This ship accommodates 5,734 passengers.</p>
+               </p>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="image-container">
+              <img src="images0\carnival_paradise.jpeg" alt="Image 3"  style="height: 220px; width: 500px;">
+              <div class="overlay">
+               <p alt="Overlay 3">
+                <h1 style="font-weight: bolder ; color: rgb(218, 250, 40); font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; margin: 10px;"><center>Carnival Paradise</center></h1>
+                <p style="color: yellow; font-family: Georgia, 'Times New Roman', Times, serif; margin: 25px;">Wonder of the Seas measures 1,188 feet (362 m) in length and has a gross tonnage of 236,857 across 18 decks. This ship accommodates 5,734 passengers.</p>
+               </p>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="image-container">
+              <img src="images0\carnival_pride.jpg" alt="Image 3"  style="height: 220px; width: 500px;">
+              <div class="overlay">
+               <p alt="Overlay 3">
+                <h1 style="font-weight: bolder ; color: rgb(218, 250, 40); font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; margin: 10px;"><center>Carnival Pride</center></h1>
+                <p style="color: yellow; font-family: Georgia, 'Times New Roman', Times, serif; margin: 25px;">Wonder of the Seas measures 1,188 feet (362 m) in length and has a gross tonnage of 236,857 across 18 decks. This ship accommodates 5,734 passengers.</p>
+               </p>
+              </div>
+            </div>
+          </div>
+    
+
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="image-container">
+              <img src="images0\carnival.jpg" alt="Image 3"  style="height: 220px; width: 500px;">
+              <div class="overlay">
+               <p alt="Overlay 3">
+                <h1 style="font-weight: bolder ; color: rgb(218, 250, 40); font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; margin: 10px;"><center>Carnival Glory</center></h1>
+                <p style="color: yellow; font-family: Georgia, 'Times New Roman', Times, serif; margin: 25px;">Wonder of the Seas measures 1,188 feet (362 m) in length and has a gross tonnage of 236,857 across 18 decks. This ship accommodates 5,734 passengers.</p>
+               </p>
+              </div>
+            </div>
+          </div>
+    
+    
+       
+        </div>
+      </div>
+      <br>
+      <br>
+    
+     <!--Start of footer-->
+ <footer class="footer" style="background-color: black; color: white; border-radius: 20px;" >
+  <div class="container">
+    <div class="row shadow2" style="background-color: black; color: white;">
+      <div class="col-md-3" style="position: relative; margin-top: 71px;">
+        <h3><strong> <span8 style="color: blue;"><strong>|</strong></span8>MARINA FLEET</strong></h3>
+        The Pakistan Fleet Marine Forces (FMF) <br> are combined general and special <br> purpose forces within the Pakistan <br> Department 
+        of the Navy that perform <br> offensive amphibious or expeditionary <br> warfare and defensive maritime <br> employment.
+        </div>
+  
+
+      <div class="col-md-3">
+        <h4 style="position: relative; margin-left: 27px; margin-top: 26px;"><strong> Useful Links</strong></h4>
+   <ul style="position: relative; margin-top: 39px">
+    <a href="Index.html" style="text-decoration: none; "><span11 class="btn" style="color: rgb(255, 255, 255); margin-left: 8%;">HOME</span11> </a><hr>
+    <a href="About Us.html" style="text-decoration: none; "><span12  class="btn" style="color: rgb(255, 255, 255); margin-left: 8%;"> ABOUT US</span12></a><hr>
+    <a href="About Us.html"  style="text-decoration: none; "><span13 class="btn" style="color: rgb(255, 255, 255); margin-left: 8%;"> CONTACT US</span13></a><hr>
+    <a href="#" style="text-decoration: none; "><span14  class="btn" style="color: rgb(255, 255, 255); margin-left: 8%;">SIDE MAP</span14> </a><hr>
+    <div class="container mt-3">
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal" id="def">
+       FEEDBACK
+      </button>
+    </div>
+    
+    <!-- The Modal -->
+    <div class="modal" id="myModal">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+    
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title" style="color: black; margin-left: 35%;">FEEDBACK</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" id="ftt1"></button>
+          </div>
+    
+          <!-- Modal body -->
+          <div class="modal-body">
+           <form action="">
+              <input type="text" placeholder="Feedback Please :)" class="ftt">
+           </form>
+          </div>
+    
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal" id="ftt2">SEND</button>
+          </div>
+    
+        </div>
+      </div>
+    </div>
+    
+   </ul>
+      </div>
+
+      <div class="col-md-3">
+        <h4 style="position: relative; margin-top: 26px;"><strong> Contact Us</strong></h4>
+<p  style="position: relative;margin-top: 37px;">
+  ADDRESS: D - 4 Block H <br> North Nazimabad Town, <br> Karachi City, Sindh 74700
+ <br><br>
+ <strong>Phone:</strong>(021) 36620102
+ <br><br>
+ <strong>Email:</strong>info-nn@aptech-education.com.pk<br><br>
+ <a href=""><img src="images0\insta.png" width="53px" style="border-radius: 20px;" class="btn"></a> 
+ <a href=""><img src="images0\twitter.png" width="50px" style=" position: relative;margin-left: 12px; border-radius: 20px;" class="btn" ></a>
+ <a href=""><img src="images0\Facebook.jpg" width="50px" class="btn" style="border-radius: 150px;"></a>
+</p>
+      </div>
+
+      <div class="col-md-3">
+          <h4 style="position: relative; margin-top: 27px;"><strong> Our Newsletter</strong></h4>
+          <p style="position: relative;margin-top: 37px;">Tamen quem nulla quae legam multos aute sint culpa legam noster magna veniam enim veniam illum dolore legam minim quorum culpa amet magna export quem marada parida nodela caramase seza.</p>
+          <form action="" method="post">
+            <input type="email" name="email" style="width:170px ;">
+            
+            <input type="submit" class="hover-sub " value="Subscribe">
+          </form>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col text-center">
+        &copy; 2023 Your Company. All rights reserved.
+      </div>
+    </div>
+
+<!--End of footer-->
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
